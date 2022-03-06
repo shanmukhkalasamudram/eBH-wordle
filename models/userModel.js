@@ -17,6 +17,9 @@ const userSchema = new Schema({
         type: String//,
         //required: [true, 'Score field is required'],
     },
+    position: {
+        type: String
+    },
     /* password2: {
          type: String,
          required: [true, 'Retype password field is required'],
