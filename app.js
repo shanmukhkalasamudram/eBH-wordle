@@ -1,44 +1,4 @@
 
-// Import necessary packages
-/*const express = require(“express”);
-const bodyParser = require(“body-parser”);
-
-// create and configure the express app
-const PORT = process.env.PORT || 3000;
-const app = express();
-app.use(express.json());
-
-// Database Connection Info
-const MongoClient = require(“mongodb”).MongoClient;
-
-// the URL we copied from earlier. Replace username and password with what you created in the initial steps
-const url = “mongodb://sweetgame:sweetgame1@ds135156.mlab.com:35156/sweetgame”;
-let db;
-
-// The index route
-app.get(“/”, function(req, res) {
-   res.send(“Sweet Game Leaderboard API!”);
-});
-
-// Connect to the database with [url]
-(async () => {
-   let client = await MongoClient.connect(
-       url,
-       { useNewUrlParser: true }
-   );
-
-   db = client.db(“Players”);
-
-   app.listen(PORT, async function() {
-       console.log(`Listening on Port ${PORT}`);
-       if (db) {
-           console.log(“Database is Connected!”);
-       }
-   });
-})();*/
-
-
-
 var express = require("express"),
     app = express(),
     bodyParser = require("body-parser"),
@@ -46,7 +6,7 @@ var express = require("express"),
 
 
 
-mongoose.connect("mongodb://localhost/wordle");
+mongoose.connect("mongodb+srv://taskapp:kvss%401199@cluster0.oqq9w.mongodb.net/wordle?retryWrites=true&w=majority");
 mongoose.Promise = global.Promise;
 
 app.set("view engine", "ejs");
